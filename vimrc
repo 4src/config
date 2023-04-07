@@ -65,6 +65,7 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 filetype plugin on
 set encoding=UTF-8
+autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 " NERD TREE AND ICONS
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 0
