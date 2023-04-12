@@ -5,7 +5,7 @@ DO_yellow=\033[93m
 DO_white=\033[0m
 ##########################################################
 define DO
-   figlet -W -f straight  ${1}s;
+   figlet -W -f straight  ${1}s; echo ""
 	 $(foreach d,$(DO_repos), printf "$(DO_cyan):: $1 $d$(DO_white)\n"; cd $d; $(MAKE) $1;)
 endef
 
