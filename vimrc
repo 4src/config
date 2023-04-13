@@ -125,3 +125,4 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 hi Normal guibg=NONE ctermbg=NONE
 hi NonText ctermbg=NONE
+
