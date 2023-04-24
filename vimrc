@@ -42,7 +42,7 @@ Plugin 'ciaranm/inkpot'
 Plugin 'sainnhe/sonokai'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'tbastos/vim-lua'
-Plugin 'vim-syntastic/syntastic'
+"Plugin 'vim-syntastic/syntastic'
 Plugin 'AutumnLeaf'
 Plugin 'nanotech/jellybeans.vim'
 "CSS properties and color selector
@@ -116,13 +116,13 @@ set statusline+=%#Cursor#       " colour
 set statusline+=\ %3p%%\                " percentage
 
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 hi Normal guibg=NONE ctermbg=NONE
 hi NonText ctermbg=NONE
-
+"nnoremap <silent> <C-l> :nohl<CR><C-l>
