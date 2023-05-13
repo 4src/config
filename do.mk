@@ -46,21 +46,21 @@ py: ## run some python  (e.g. make py lib)
 	mkdir -p ~/tmp
 	echo "pdf-ing $@ ... "
 	a2ps                 \
-		-bR                 \
-		--chars-per-line 100  \
+		-B                 \
+		--chars-per-line 90  \
 		--file-align=fill      \
 		--line-numbers=1        \
 		--borders=no             \
 		--pro=color               \
-		--left-title=""            \
-		--columns  3                 \
+		--columns  2                 \
 		-M letter                     \
-		--footer=""                    \
-		--right-footer=""               \
 	  -o	 $@.ps $<
 	ps2pdf $@.ps $@; rm $@.ps
 	open $@
 
+		#--left-title=""            \
+		#--footer=""                    \
+	#-right-footer=""               \
 
 ##########################################################
 define DO_fish
