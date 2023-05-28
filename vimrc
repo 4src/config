@@ -34,6 +34,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'julialang/julia-vim'
 Plugin 'kyoz/purify'
+Plugin 'bakpakin/janet.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'jnurmine/Zenburn'
 Plugin 'vim-airline/vim-airline-themes'
