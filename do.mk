@@ -61,6 +61,25 @@ py: ## run some python  (e.g. make py lib)
 	ps2pdf $@.ps $@; rm $@.ps
 	open $@
 
+~/tmp/%.pdf: %.lisp  ## .py ==> .pdf
+	mkdir -p ~/tmp
+	echo "pdf-ing $@ ... "
+	a2ps                 \
+		-bR                 \
+		--chars-per-line 100  \
+		--file-align=fill      \
+		--line-numbers=1        \
+		--borders=no             \
+		--pro=color               \
+		--left-title=""            \
+		--columns  3                 \
+		-M letter                     \
+		--footer=""                    \
+		--right-footer=""               \
+	  -o	 $@.ps $<
+	ps2pdf $@.ps $@; rm $@.ps
+	open $@
+
 
 ##########################################################
 define DO_fish
