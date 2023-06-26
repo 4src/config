@@ -46,13 +46,13 @@ py: ## run some python  (e.g. make py lib)
 	mkdir -p ~/tmp
 	echo "pdf-ing $@ ... "
 	a2ps                 \
-		-Br                 \
-		--chars-per-line 100  \
+		-BR                 \
+		--chars-per-line 105  \
 		--file-align=fill      \
 		--line-numbers=1        \
 		--borders=no             \
 		--pro=color               \
-		--columns  3                 \
+		--columns  2                 \
 		-M letter                     \
 	  -o	 $@.ps $<
 	ps2pdf $@.ps $@; rm $@.ps
