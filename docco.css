@@ -538,11 +538,12 @@ pre .hljs-diff .hljs-change {
 pre .hljs-chunk {
   color: #aaa
 }
+tr { line-height: 15px; }
+p { line-height: 15px; }
 
 pre .hljs-tex .hljs-formula {
   opacity: 0.5;
 }
-tr,p { line-height: 14px; }
 
 #forkongithub a { background:rgb(15,25,68);
                   color:#fff;text-decoration:none;font-family:arial,sans-serif;
