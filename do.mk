@@ -42,6 +42,22 @@ ed: ## edit a file (e.g. make ed lib.lua)
 py: ## run some python  (e.g. make py lib)
 	python3 -B $(word 2, $(MAKECMDGOALS))
 
+~/tmp/%.pdf: %.py  ## .py ==> .pdf
+	mkdir -p ~/tmp
+	echo "pdf-ing $@ ... "
+	a2ps                 \
+		-Br                 \
+		--chars-per-line 105  \
+		--file-align=fill      \
+		--line-numbers=1        \
+		--borders=no             \
+		--pro=color               \
+		--columns  3                 \
+		-M letter                     \
+	  -o	 $@.ps $<
+	ps2pdf $@.ps $@; rm $@.ps
+	open $@
+
 ~/tmp/%.pdf: %.lua  ## .py ==> .pdf
 	mkdir -p ~/tmp
 	echo "pdf-ing $@ ... "
@@ -53,22 +69,6 @@ py: ## run some python  (e.g. make py lib)
 		--borders=no             \
 		--pro=color               \
 		--pretty-print="../config/lua.ssh" \
-		--columns  3                 \
-		-M letter                     \
-	  -o	 $@.ps $<
-	ps2pdf $@.ps $@; rm $@.ps
-	open $@
-
-~/tmp/%.pdf: %.py  ## .py ==> .pdf
-	mkdir -p ~/tmp
-	echo "pdf-ing $@ ... "
-	a2ps                 \
-		-Br                 \
-		--chars-per-line 105  \
-		--file-align=fill      \
-		--line-numbers=1        \
-		--borders=no             \
-		--pro=color               \
 		--columns  3                 \
 		-M letter                     \
 	  -o	 $@.ps $<
