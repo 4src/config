@@ -54,11 +54,11 @@ Plugin 'dracula/vim', { 'as': 'dracula' }
 "CSS properties and color selector
 Plugin 'KabbAmine/vCoolor.vim'
 Plugin 'lilydjwg/colorizer'
+Plugin 'sheerun/vim-polyglot'
 " File explorer
 Plugin 'scrooloose/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
 " Intellisense and code completion with syntax highlighting
-Plugin 'sheerun/vim-polyglot'
 Plugin 'preservim/nerdcommenter'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
