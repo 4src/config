@@ -127,3 +127,16 @@ set statusline+=%*
 hi Normal guibg=NONE ctermbg=NONE
 hi NonText ctermbg=NONE
 "nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+ if has('wildmenu')
+   set wildmenu
+   if exists('+wildmode')
+     set wildmode=longest:full,full
+   endif
+   set wildcharm=<C-Z>
+   map <F10> :emenu <C-Z>
+   imap <F10> <C-O>:emenu <C-Z>
+   if !has('gui_running')
+     runtime! menu.vim
+   endif " !has('gui_running')
+ endif " 'wildmenu'
