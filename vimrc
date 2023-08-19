@@ -83,7 +83,9 @@ set guifont=DroidSansMono_Nerd_Font:h11
 colorscheme habamax
 set lispwords+=!
 set lispwords+=geta
-set lispwords+=?
+set lispwords+=is
+set lispwords+=defact
+set lispwords+=loop
 
 set spellsuggest=fast,1 "Don't show too much suggestion for spell check
 nn <F7> :setlocal spell! spell?<CR>
