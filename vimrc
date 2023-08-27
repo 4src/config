@@ -140,3 +140,9 @@ hi NonText ctermbg=NONE
      runtime! menu.vim
    endif " !has('gui_running')
  endif " 'wildmenu'
+
+if has("mouse_sgr")
+       set ttymouse=sgr
+else
+       set ttymouse=xterm2
+end
