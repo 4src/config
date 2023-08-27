@@ -62,7 +62,7 @@ py: ## run some python  (e.g. make py lib)
 	mkdir -p ~/tmp
 	echo "pdf-ing $@ ... "
 	a2ps                 \
-		-BR                 \
+		-Br                 \
 		--chars-per-line 105  \
 		--file-align=fill      \
 		--line-numbers=1        \
