@@ -29,7 +29,7 @@ bind -n M-Down select-pane -D
 # enable vi mode keys
 set-window-option -g mode-keys vi
 # set default terminal mode to 256 colors
-set -g default-terminal "screen-256color"
+set -g default-terminal "tmux-256color"
 bind-key u capture-pane \;\
     save-buffer /tmp/tmux-buffer \;\
     split-window -l 10 "urlview /tmp/tmux-buffer"
